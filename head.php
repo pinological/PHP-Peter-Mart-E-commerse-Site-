@@ -1,9 +1,30 @@
+<?php
+$stat = "";
+$statlink = "";
+session_start();
+if(empty($_SESSION["username"])){
+  $_SESSION["username"] = "Not Login Yet";
+  $stat = "Login";
+  $statlink = "login.php";
+}
+else{
+  $stat = "Logout";
+  $statlink = "logout.php";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php
-if($usernamemain == ""){
+// print_r($_SESSION);
+// echo "<p class='textadmin'> ID here:".$_SESSION['username']."</p>";
+if(empty($_SESSION["username"])){
   $usernamemain = "Not login Yet";
   
+}
+else{
+  $usernamemain = $_SESSION["username"];
 }
 ?>
 <head>
@@ -32,7 +53,7 @@ if($usernamemain == ""){
 
         </div>
         <p class="usertext">
-                <?php echo $usernamemain ?>
+                <?php echo $_SESSION["username"]; ?>
 
         </p>
          <img src="accet/cart.png" alt="cart" class="cartimg" height="40px">
@@ -74,12 +95,13 @@ if($usernamemain == ""){
       Tech
     </button>
     <div class="dropdown-content">
-      <a href="#">Gaming PC</a>
-      <a href="#">Gaming Laptop</a>
+      <a href="#">Gaming PC / Laptop</a>
       <a href="#">accessories</a>
     </div>
   </div>
+  <a href=<?php echo '"'.$statlink.'""'; ?> style="float: right; padding-right:60px;" ><?php echo $stat;?></a>
   <br>
+  
  <!-- slider -->
 </div>
 

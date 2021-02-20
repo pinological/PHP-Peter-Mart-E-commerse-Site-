@@ -1,7 +1,4 @@
-
 <?php $title = "Home Page";
-$usernamemain = "";
-
 $servername = "localhost";
 $username = "root";
 $password = "";

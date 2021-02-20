@@ -154,6 +154,7 @@ a{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  
 
   /* slider */
  
@@ -409,4 +410,62 @@ table, th, td {
 th, td {
   padding: 15px;
   text-align: left;
+}
+
+.toplogin{
+  background-color: tomato;
+  width: 100%;
+  height: 70px;
+}
+.logintext{
+  font-size: 20px;
+  font-weight: bolder;
+  position: relative;
+  top: 30px;
+  text-align: center;
+  color: white;
+}
+.loginarea{
+  width: 60%;
+  height: 40%;
+  background-color: rgb(48, 48, 48);
+}
+.login{
+  display: inline-block;
+  background: black ;
+  border: solid;
+  color: white;
+  border-color: tomato;
+  padding: 10px 10px;
+}
+.login:hover{
+  display: inline-block;
+  background: tomato ;
+  border: solid;
+  font-weight: bolder;
+  color: white;
+  border-color: tomato;
+  padding: 10px 10px;
+}
+.register{
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  background: black ;
+  border: solid;
+  color: white;
+  border-color: tomato;
+  padding: 9px 9px;
+}
+.register:hover{
+  display: inline-block;
+  background: tomato ;
+  border: solid;
+  font-weight: bolder;
+  color: white;
+  border-color: tomato;
+  padding: 10px 10px;
+}
+.logout{
+  padding-right: 20%;
 }
