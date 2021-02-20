@@ -17,6 +17,7 @@ $sql = "SELECT * FROM people";
 $result = $conn->query($sql);
 $username = "";
 $password = "";
+$email = "";
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -24,20 +25,23 @@ if ($result->num_rows > 0) {
       if($row['role'] == "user"){
           $username = $row['name'];
           $password = $row['pass'];
+          $email = $row['email'];
         //   echo $password.$username;
       }
 
   }
   if(isset($_POST['submit'])){
-  if($_POST['username'] == $username && $_POST['password'] == $password){
+  if($_POST['username'] == $username && md5($_POST['password']) == $password){
       session_start();
     $_SESSION['username'] = $username;
+    $_SESSION['email'] = $email;
   echo '<script> window.location.replace("http://localhost/petermart/index.php"); </script>';
   
 
 
   }
   else{
+    $_SESSION = array();
       echo '<p class="textadmin"> Either User name or password wrong /<br> Try Register</p>';
   }
 }

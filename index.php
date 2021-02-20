@@ -14,10 +14,6 @@ if ($conn->connect_error) {
 ?>
 <?php include 'head.php';?>
 
-
-
-
-
 <body>
     <!-- game -->
     <p class="showname">
@@ -39,6 +35,7 @@ if ($conn->connect_error) {
         echo "<img src=".$row['imgloco']." height='200px'>";
         echo "<p class='productname' >".$row["name"]."</p>";
         echo "<p class='productprice'> Rs ".$row["price"]."</p>";
+        echo '<center><form action="submitconf/addcartconf.php" method="post"><input type = "hidden" name = "topic" value = "'.$row["prodid"].'" /><input type="submit" class="cartbtn" value="Add to Cart" name="submit"></form></center>';
         echo '</div>';
         }
         
@@ -65,13 +62,14 @@ if ($conn->connect_error) {
         $i = 0;
         while($row = $result->fetch_assoc()) {
         $i++;
-        if($i > 6){
+        if($i > 5){
             break;
         }
         echo "<div class='productboxmerch'>";
         echo "<img src=".$row['imgloco']." height='200px'>";
         echo "<p class='productname' >".$row["name"]."</p>";
         echo "<p class='productprice'> Rs ".$row["price"]."</p>";
+        echo '<center><form action="submitconf/addcartconf.php" method="post"><input type = "hidden" name = "topic" value = "'.$row["prodid"].'" /><input type="submit" class="cartbtn" value="Add to Cart" name="submit"></form></center>';
         echo '</div>';
         }
         
@@ -79,9 +77,10 @@ if ($conn->connect_error) {
         echo "0 results";
       }
 
+
    
     ?>
-
+  
     </div>
 
     <!-- tech -->
@@ -105,6 +104,7 @@ if ($conn->connect_error) {
         echo "<img src=".$row['imgloco']." height='200px'>";
         echo "<p class='productname' >".$row["name"]."</p>";
         echo "<p class='productprice'> Rs ".$row["price"]."</p>";
+        echo '<center><form action="submitconf/addcartconf.php" method="post"><input type = "hidden" name = "topic" value = "'.$row["prodid"].'" /><input type="submit" class="cartbtn" value="Add to Cart" name="submit"></form></center>';
         echo '</div>';
         }
         

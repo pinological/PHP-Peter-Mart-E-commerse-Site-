@@ -21,11 +21,11 @@ else{
 // echo "<p class='textadmin'> ID here:".$_SESSION['username']."</p>";
 if(empty($_SESSION["username"])){
   $usernamemain = "Not login Yet";
-  
 }
 else{
   $usernamemain = $_SESSION["username"];
 }
+
 ?>
 <head>
     <meta charset="UTF-8">
@@ -57,7 +57,7 @@ else{
 
         </p>
          <img src="accet/cart.png" alt="cart" class="cartimg" height="40px">
-         <a href="#" class="cartre">Add Cart</a>
+         <a href="submitconf/carddatashow.php" class="cartre">Add Cart</a>
        
         <br>
         </div>
@@ -72,10 +72,9 @@ else{
      
     </button>
     <div class="dropdown-content">
-      <a href="#">XBOX</a>
-      <a href="#">PS(Play Station)</a>
-      <a href="#">PC</a>
-      <a href="#">Nintendo Switch</a>
+      <a href="ps.php">PS(Play Station)</a>
+      <a href="pc.php">PC</a>
+      <a href="nin.php">Nintendo Switch</a>
     </div>
   </div>
 
@@ -84,9 +83,9 @@ else{
      
     </button>
     <div class="dropdown-content">
-      <a href="#">Youtuber</a>
-      <a href="#">Game</a>
-      <a href="#">Meme</a>
+      <a href="yt.php">Youtuber</a>
+      <a href="game.php">Game</a>
+      <a href="meme.php">Meme</a>
     </div>
   </div>
 
@@ -95,10 +94,21 @@ else{
       Tech
     </button>
     <div class="dropdown-content">
-      <a href="#">Gaming PC / Laptop</a>
-      <a href="#">accessories</a>
+      <a href="pcmain.php">Gaming PC / Laptop</a>
+      <a href="acc.php">accessories</a>
     </div>
   </div>
+  <div class="dropdown">
+    <button class="dropbtn">
+      Show ALL
+    </button>
+    <div class="dropdown-content">
+      <a href="priceall.php">By price</a>
+      <a href="all.php">By name</a>
+    </div>
+  </div>
+
+
   <a href=<?php echo '"'.$statlink.'""'; ?> style="float: right; padding-right:60px;" ><?php echo $stat;?></a>
   <br>
   

@@ -32,8 +32,9 @@ if ($result->num_rows > 0) {
       }
 
   }
+  echo $password;
   if(isset($_POST['submit'])){
-  if($_POST['username'] == $username && $_POST['password'] == $password){
+  if($_POST['username'] == $username && md5($_POST['password']) == $password){
   echo '<script> window.location.replace("http://localhost/petermart/adminmenu.php"); </script>';
 
 

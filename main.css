@@ -466,6 +466,66 @@ th, td {
   border-color: tomato;
   padding: 10px 10px;
 }
-.logout{
-  padding-right: 20%;
+.container{
+  margin: auto;
+  width: 60%;
+  background-color: tomato;
+  padding: 100px 20px;
+}
+.itemname{
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  
+}
+.imgshowpart{
+  display: inline-block;
+  padding-left: 100px;
+}
+.datacollect{
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  bottom: 150px;
+}
+.addbtn{
+  background-color: skyblue;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  float: right;
+}
+.itembox{
+  color: tomato;
+
+}
+.sendmail{
+  background-color: skyblue;
+  color: rgb(255, 255, 255);
+  
+  padding : 10px 30px;
+  border: none;
+
+
+}
+.sendmail:hover{
+  background-color: rgb(27, 91, 211);
+  color: rgb(255, 255, 255);
+ 
+  padding : 10px 30px;
+  font-weight: bolder;
+  border: none;
+
+
+}
+.cartbtn{
+  color: white;
+  border: none;
+  background: rgb(206, 48, 12);
+}
+.cartbtn:hover{
+  color: white;
+  border: none;
+  font-weight: bolder;
+  background: rgb(206, 48, 12);
 }

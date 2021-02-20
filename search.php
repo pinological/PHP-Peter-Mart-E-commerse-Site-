@@ -23,7 +23,7 @@ if ($conn->connect_error) {
     <div class="showcase">
     <?php
     $tempdata = "";
-    $showgame = "select * from product where name like '".$_GET['name']."%'";
+    $showgame = "select * from product where name like '".htmlspecialchars($_GET['name'])."%'";
     $result = $conn->query($showgame);
     if ($result->num_rows > 0) {
         // output data of each row
@@ -34,6 +34,7 @@ if ($conn->connect_error) {
         echo "<p class='productname' >".$row["name"]."</p>";
         echo "<p class='productprice'> Rs ".$row["price"]."</p>";
         $tempdata = $row['type'];
+        echo '<center><form action="submitconf/addcartconf.php" method="post"><input type = "hidden" name = "topic" value = "'.$row["prodid"].'" /><input type="submit" class="cartbtn" value="Add to Cart" name="submit"></form></center>';
         echo '</div>';
         }
         
@@ -57,6 +58,7 @@ if ($conn->connect_error) {
         echo "<img src=".$row['imgloco']." height='200px'>";
         echo "<p class='productname' >".$row["name"]."</p>";
         echo "<p class='productprice'> Rs ".$row["price"]."</p>";
+        echo '<center><form action="submitconf/addcartconf.php" method="post"><input type = "hidden" name = "topic" value = "'.$row["prodid"].'" /><input type="submit" class="cartbtn" value="Add to Cart" name="submit"></form></center>';
         echo '</div>';
         }
         
