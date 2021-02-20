@@ -6,8 +6,10 @@
 * UI
 * Session
 * User Register and Login 
+* Search
+* Sorting
 * cart
 * Email
 
-## Not done
+## All Finish
 
