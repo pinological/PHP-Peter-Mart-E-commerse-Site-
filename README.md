@@ -4,9 +4,9 @@
 * Product ADD and Delete
 * User Delete
 * UI
-
-## Not done
 * Session
 * User Register and Login 
+
+## Not done
 * cart
 * Email
