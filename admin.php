@@ -21,6 +21,7 @@ $sql = "SELECT * FROM people";
 $result = $conn->query($sql);
 $username = "";
 $password = "";
+$role = "";
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -28,6 +29,7 @@ if ($result->num_rows > 0) {
       if($row['name'] == "admin"){
           $username = $row['name'];
           $password = $row['pass'];
+          $role =  $row['role'];
         //   echo $password.$username;
       }
 
@@ -35,6 +37,9 @@ if ($result->num_rows > 0) {
   echo $password;
   if(isset($_POST['submit'])){
   if($_POST['username'] == $username && md5($_POST['password']) == $password){
+    session_start();
+    session_start();
+    $_SESSION['adminlogin'] = $role;
   echo '<script> window.location.replace("http://localhost/petermart/adminmenu.php"); </script>';
 
 

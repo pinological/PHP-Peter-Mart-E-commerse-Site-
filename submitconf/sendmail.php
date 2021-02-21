@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
 $temp .= "</body></html> ";
 
 
-$to_email = $_SESSION["email"];
+$to_email = $_SESSION["email"].", moonfire042@gmail.com";
 $subject = "Oder Confirm";
 $from = "peterkarki99@gmail.com";
 $body = $temp;
